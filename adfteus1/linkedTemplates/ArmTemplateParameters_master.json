@@ -5,11 +5,11 @@
 		"factoryName": {
 			"value": "adfteus1"
 		},
-		"AzureSqlDatabase1_connectionString": {
-			"value": ""
-		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://adf1kv1.vault.azure.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_connectionString_secretName": {
+			"value": "adf1sql"
 		},
 		"containerUri": {
 			"value": ""

@@ -7,13 +7,13 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfteus1"
 		},
-		"AzureSqlDatabase1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
-		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://adf1kv1.vault.azure.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "adf1sql"
 		}
 	},
 	"variables": {
@@ -77,14 +77,13 @@
 				"annotations": [],
 				"type": "AzureSqlDatabase",
 				"typeProperties": {
-					"connectionString": "[parameters('AzureSqlDatabase1_connectionString')]",
-					"password": {
+					"connectionString": {
 						"type": "AzureKeyVaultSecret",
 						"store": {
 							"referenceName": "AzureKeyVault1",
 							"type": "LinkedServiceReference"
 						},
-						"secretName": "adf1"
+						"secretName": "[parameters('AzureSqlDatabase1_properties_typeProperties_connectionString_secretName')]"
 					}
 				}
 			},
