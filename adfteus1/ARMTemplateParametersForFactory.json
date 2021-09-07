@@ -3,7 +3,13 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"factoryName": {
-			"value": "adfteus2"
+			"value": "adfteus1"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://adf1kv1.vault.azure.net/"
 		}
 	}
 }
