@@ -72,8 +72,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "dbo",
-			"table": "Orders"
+			"schema": "HR",
+			"table": "Employees"
 		}
 	}
 }
