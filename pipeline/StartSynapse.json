@@ -1,0 +1,30 @@
+{
+	"name": "StartSynapse",
+	"properties": {
+		"activities": [
+			{
+				"name": "StartDW",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://management.azure.com/subscriptions/02ec76b8-036d-403a-a2a9-33897befb584/resourceGroups/fixo/providers/Microsoft.Sql/servers/teusdb/databases/AdventureWorksDW/resume?api-version=2020-08-01-preview",
+					"method": "POST",
+					"disableCertValidation": false,
+					"authentication": {
+						"type": "MSI",
+						"resource": "https://management.core.windows.net/"
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}
